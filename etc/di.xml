@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Wtc\Film\Api\FilmRepositoryInterface"
+                type="Wtc\Film\Model\FilmRepository"/>
+    <preference for="Wtc\Film\Api\Data\FilmInterface"
+                type="Wtc\Film\Model\Film"/>
+    <preference for="Wtc\Film\Api\Data\FilmSearchResultInterface"
+                type="Wtc\Film\Model\FilmSearchResult"/>
+
+    <virtualType name="CustomFilmLogFile"
+                 type="Magento\Framework\Logger\Handler\Base">
+        <arguments>
+            <argument name="fileName" xsi:type="string">/var/log/film_debug.log
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="FilmLogger"
+                 type="Magento\Framework\Logger\Monolog">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="debug" xsi:type="object">
+                    CustomFilmLogFile
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Wtc\Film\Observer\Log">
+        <arguments>
+            <argument name="logger" xsi:type="object">
+                FilmLogger
+            </argument>
+        </arguments>
+    </type>
+
+<!--    <type name="Wtc\Film\Ui\DataProvider\Category\ListingDataProvider">-->
+<!--        <plugin name="wtc_film_attributes"-->
+<!--                type="Wtc\Film\Plugin\AddAttributesToUiDataProvider"/>-->
+<!--    </type>-->
+<!--    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">-->
+<!--        <arguments>-->
+<!--            <argument name="collections" xsi:type="array">-->
+<!--                <item name="wtc_film_category_listing_data_source"-->
+<!--                      xsi:type="string">WtcFilmCategoryCollection</item>-->
+<!--            </argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+<!--    <virtualType name="WtcFilmCategoryCollection"-->
+<!--                 type="Wtc\Film\Ui\DataProvider\Category\Listing\Collection">-->
+<!--        <arguments>-->
+<!--            <argument name="mainTable" xsi:type="string">catalog_category_entity</argument>-->
+<!--            <argument name="resourceModel" xsi:type="string">Wtc\Film\Model\ResourceModel\Category</argument>-->
+<!--        </arguments>-->
+<!--    </virtualType>-->
+</config>

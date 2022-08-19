@@ -1,0 +1,19 @@
+<?php
+
+$viewModel = $this->getViewModel();
+
+$films = $viewModel->getAllActiveFilms();
+
+$customerFavouriteFilm = $viewModel->getCustomerFavouriteFilm();
+
+?>
+
+<h1><?= __('Favourite Film'); ?></h1>
+<?php foreach ($films as $film): ?>
+    <p><?= $film->getTitle(); ?></p>
+    <p><?= $viewModel->getCustomerFavouriteFilm(); ?>test</p>
+    <?php if ($film->getId() == $customerFavouriteFilm): ?>
+        <p><?= $film->getTitle(); ?></p>
+    <?php endif; ?>
+<?php endforeach; ?>
+
