@@ -36,23 +36,20 @@
         </arguments>
     </type>
 
-<!--    <type name="Wtc\Film\Ui\DataProvider\Category\ListingDataProvider">-->
-<!--        <plugin name="wtc_film_attributes"-->
-<!--                type="Wtc\Film\Plugin\AddAttributesToUiDataProvider"/>-->
-<!--    </type>-->
-<!--    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">-->
-<!--        <arguments>-->
-<!--            <argument name="collections" xsi:type="array">-->
-<!--                <item name="wtc_film_category_listing_data_source"-->
-<!--                      xsi:type="string">WtcFilmCategoryCollection</item>-->
-<!--            </argument>-->
-<!--        </arguments>-->
-<!--    </type>-->
-<!--    <virtualType name="WtcFilmCategoryCollection"-->
-<!--                 type="Wtc\Film\Ui\DataProvider\Category\Listing\Collection">-->
-<!--        <arguments>-->
-<!--            <argument name="mainTable" xsi:type="string">catalog_category_entity</argument>-->
-<!--            <argument name="resourceModel" xsi:type="string">Wtc\Film\Model\ResourceModel\Category</argument>-->
-<!--        </arguments>-->
-<!--    </virtualType>-->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="wtc_film_film_listing_data_source"
+                      xsi:type="string">Wtc\Film\Model\ResourceModel\Film\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Wtc\Film\Model\ResourceModel\Film\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">wtc_film_film</argument>
+            <argument name="resourceModel" xsi:type="string">Wtc\Film\Model\ResourceModel\Film</argument>
+        </arguments>
+    </virtualType>
+
 </config>
