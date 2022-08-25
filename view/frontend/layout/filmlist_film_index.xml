@@ -59,9 +59,7 @@
                name="filmlist.film"
                template="Wtc_Film::films.phtml">
             <arguments>
-                <argument name="view_model"
-                          xsi:type="object">Wtc\Film\ViewModel\Films
-                </argument>
+                <argument name="view_model" xsi:type="object">Wtc\Film\ViewModel\Films</argument>
             </arguments>
         </block>
     </referenceContainer>
