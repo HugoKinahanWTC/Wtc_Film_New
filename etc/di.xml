@@ -47,7 +47,7 @@
     <virtualType name="Wtc\Film\Model\ResourceModel\Film\Grid\Collection"
                  type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
-            <argument name="mainTable" xsi:type="string">wtc_film_film</argument>
+            <argument name="mainTable" xsi:type="string">film_list</argument>
             <argument name="resourceModel" xsi:type="string">Wtc\Film\Model\ResourceModel\Film</argument>
         </arguments>
     </virtualType>

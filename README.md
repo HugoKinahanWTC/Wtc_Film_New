@@ -10,7 +10,7 @@ Facts
 Description
 -----------
 
-Technical steps:
+Technical brief:
 1. Create a new module (Wtc_Film)
 2. Create a new configuration with Enable Film (yes/no), debug (yes/no). 
    Please review system.xml and config.xml.
@@ -47,27 +47,17 @@ Technical steps:
 Story:
 - 
 
-Plugins:
------------
-```
-- Class: 
-- Method: 
-- Spec: 
-```
 Configuration:
 -----------
-The path in admin for the configuration is:
+The path in admin for film configuration is:
 ```
-Stores > Configuration 
+Stores > Configuration > WTC FILM > Film Configuration
 ```
 List of configuration
 ``` 
-- 
-- 
-```
-```
-- 
-- 
+- Enable Film Disabled (Inactive)
+- Enable Debug Disabled
+- Film Genre - Comedy (Hidden)
 ```
 ```
 
