@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Wtc\Film\Setup\Patch\Data;
 
 use Magento\Customer\Model\Customer;
-use Magento\Eav\Setup\EavSetup;
 use Magento\Eav\Setup\EavSetupFactory;
+use Magento\Eav\Setup\EavSetup;
 use Magento\Eav\Model\Config;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
@@ -41,7 +41,7 @@ class AddBio implements DataPatchInterface
         $eavSetup = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
 
         $eavSetup->addAttribute(
-            \Magento\Customer\Model\Customer::ENTITY,
+            Customer::ENTITY,
             'customer_bio',
             [
                 'type'         => 'varchar',

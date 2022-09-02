@@ -11,9 +11,9 @@ use Wtc\Film\Api\Data\FilmInterface;
 use Wtc\Film\Api\Data\FilmSearchResultInterface;
 use Wtc\Film\Api\Data\FilmSearchResultInterfaceFactory;
 use Wtc\Film\Api\FilmRepositoryInterface;
+use Wtc\Film\Model\ResourceModel\Films\Collection;
 use Wtc\Film\Model\ResourceModel\Films\CollectionFactory as
     FilmCollectionFactory;
-use Wtc\Film\Model\ResourceModel\Films\Collection;
 
 class FilmRepository implements FilmRepositoryInterface
 {

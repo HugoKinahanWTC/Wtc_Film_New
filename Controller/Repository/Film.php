@@ -12,12 +12,11 @@ use Magento\Framework\Controller\Result\RawFactory;
 use Magento\Framework\Controller\ResultInterface;
 use Wtc\Film\Api\Data\FilmSearchResultInterface;
 use Wtc\Film\Api\FilmRepositoryInterface;
-use Magento\Framework\Api\SortOrder;
 use Magento\Framework\Api\SortOrderBuilder;
+use Magento\Framework\Api\SortOrder;
 
 class Film implements HttpGetActionInterface
 {
-
     private FilmRepositoryInterface $filmRepository;
 
     private SearchCriteriaBuilder $searchCriteriaBuilder;

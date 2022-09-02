@@ -6,13 +6,14 @@ namespace Wtc\Film\Model;
 
 use Magento\Framework\Model\AbstractModel;
 use Wtc\Film\Api\Data\FilmInterface;
+use Wtc\Film\Model\ResourceModel\Film as ResourceFilm;
 
 class Film extends AbstractModel implements FilmInterface
 {
     // This is enough to have a functional model
     public function _construct()
     {
-        $this->_init(\Wtc\Film\Model\ResourceModel\Film::class);
+        $this->_init(ResourceFilm::class);
     }
 
     public function getTitle(): string

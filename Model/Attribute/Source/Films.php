@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Wtc\Film\Model\Attribute\Source;
 
 use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;

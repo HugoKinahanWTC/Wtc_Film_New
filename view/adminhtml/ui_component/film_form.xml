@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">film_form.film_form_data_source</item>
+            <item name="deps" xsi:type="string">film_form.film_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Add a Film</item>
+        <item name="config" xsi:type="array">
+            <item name="dataScope" xsi:type="string">data</item>
+            <item name="namespace" xsi:type="string">film_form</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="save"
+                    class="Wtc\Film\Block\Adminhtml\Page\Edit\SaveButton"/>
+<!--            <button name="delete" class="Magento\Cms\Block\Adminhtml\Page\Edit\DeleteButton"/>-->
+<!--            <button name="back" class="Magento\Cms\Block\Adminhtml\Page\Edit\BackButton"/>-->
+        </buttons>
+    </settings>
+    <dataSource name="film_form_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Wtc\Film\Model\DataProvider</argument>
+            <argument name="name" xsi:type="string">film_form_data_source
+            </argument>
+            <argument name="primaryFieldName" xsi:type="string">id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+    <fieldset name="film_details">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="collapsible" xsi:type="boolean">true</item>
+                <item name="label" xsi:type="string" translate="true">Film Details</item>
+                <item name="sortOrder" xsi:type="number">20</item>
+            </item>
+        </argument>
+        <field name="film_title">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Film Title</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">film</item>
+                    <item name="dataScope" xsi:type="string">film_title</item>
+                </item>
+            </argument>
+        </field>
+        <field name="film_status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">int</item>
+                    <item name="label" xsi:type="string"
+                          translate="true">Film Status
+                    </item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">film</item>
+                    <item name="dataScope" xsi:type="string">film_status</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>
