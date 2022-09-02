@@ -6,11 +6,10 @@ namespace Wtc\Film\Setup\Patch\Data;
 
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
-
+use Wtc\Film\Setup\Patch\Data\InstallFilms;
 
 class AddFilm implements DataPatchInterface
 {
-
     protected ModuleDataSetupInterface $moduleDataSetup;
 
     public function __construct(
@@ -33,7 +32,7 @@ class AddFilm implements DataPatchInterface
 
     public static function getDependencies(): array {
         return [
-            \Wtc\Film\Setup\Patch\Data\InstallFilms::class
+            InstallFilms::class
         ];
     }
 

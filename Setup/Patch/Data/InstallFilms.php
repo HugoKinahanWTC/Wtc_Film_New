@@ -9,7 +9,6 @@ use Magento\Framework\Setup\Patch\DataPatchInterface;
 
 class InstallFilms implements DataPatchInterface
 {
-
     protected ModuleDataSetupInterface $moduleDataSetup;
 
     public function __construct(

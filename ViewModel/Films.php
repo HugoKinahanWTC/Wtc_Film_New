@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Wtc\Film\ViewModel;
 
-use Magento\Framework\View\Element\Block\ArgumentInterface;
 use Magento\Customer\Model\Session;
+use Magento\Framework\View\Element\Block\ArgumentInterface;
 use Wtc\Film\Controller\Repository\Film;
 
 class Films implements ArgumentInterface

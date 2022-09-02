@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Wtc\Film\Observer;
 
-use Psr\Log\LoggerInterface;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
+use Psr\Log\LoggerInterface;
 use Wtc\Film\Controller\Repository\Film;
 use Wtc\Film\Api\FilmRepositoryInterface;
 

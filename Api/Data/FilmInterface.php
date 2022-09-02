@@ -6,7 +6,6 @@ namespace Wtc\Film\Api\Data;
 
 interface FilmInterface
 {
-
     /**
      * @return mixed
      */

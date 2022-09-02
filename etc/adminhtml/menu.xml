@@ -1,9 +1,17 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Wtc_Film::home" title="Category Listing" module="Wtc_Film"
-             sortOrder="1000" parent="Magento_Catalog::catalog_categories"
-             resource="Magento_Catalog::categories"
-             action="wtc_film/index/index"/>
+        <add id="Wtc_Film::films"
+             title="Films"
+             module="Wtc_Film"
+             sortOrder="51"
+             resource="Wtc_Film::films"/>
+        <add id="Wtc_Film::film"
+             title="Manage Films"
+             module="Wtc_Film"
+             sortOrder="10"
+             action="wtc_film/film"
+             resource="Wtc_Film::film"
+             parent="Wtc_Film::films"/>
     </menu>
 </config>
